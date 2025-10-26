@@ -1,181 +1,78 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Suplementos Express - Sua Loja de Suplementos</title>
-    <link rel="stylesheet" href="style.css">
-</head>
+<!doctype html>
 <body>
-    <!-- Header -->
-    <header class="header">
-        <div class="header-top">
-            <div class="container">
-                <div class="logo">
-                    <h1>Suplementos Express</h1>
-                </div>
-                <div class="search-bar">
-                    <input type="text" placeholder="Buscar produtos, marcas e mais...">
-                    <button type="submit">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
-                            <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
-                        </svg>
-                    </button>
-                </div>
-                <div class="user-actions">
-                    <div class="location">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
-                            <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/>
-                        </svg>
-                        <span>Enviar para São Paulo</span>
-                    </div>
-                    <div class="account">
-                        <span>Olá, Faça login</span>
-                        <span>Conta e Listas</span>
-                    </div>
-                    <div class="cart">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
-                            <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
-                        </svg>
-                        <span>Carrinho</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <nav class="navbar">
-            <div class="container">
-                <ul class="nav-links">
-                    <li><a href="#">Categorias</a></li>
-                    <li><a href="#">Ofertas do Dia</a></li>
-                    <li><a href="#">Whey Protein</a></li>
-                    <li><a href="#">Creatina</a></li>
-                    <li><a href="#">Pré-treino</a></li>
-                    <li><a href="#">Hipercalóricos</a></li>
-                    <li><a href="#">Aminoácidos</a></li>
-                    <li><a href="#">Vitaminas</a></li>
-                </ul>
-            </div>
-        </nav>
-    </header>
+<header class="site-header">
+<div class="container header-inner">
+<a class="brand" href="#">Suple<span>Market</span></a>
+<div class="search">
+<input id="searchInput" type="search" placeholder="Buscar produtos, ex: whey, creatina...">
+<button id="searchBtn">Buscar</button>
+</div>
+<div class="header-actions">
+<button id="cartBtn" class="cart-btn">Carrinho (<span id="cartCount">0</span>)</button>
+</div>
+</div>
+</header>
 
-    <!-- Banner Principal -->
-    <section class="banner">
-        <div class="container">
-            <div class="banner-content">
-                <h2>Os Melhores Suplementos com Frete Grátis*</h2>
-                <p>Compre agora e receba em até 24h</p>
-                <button class="btn-primary">Ver Ofertas</button>
-            </div>
-        </div>
-    </section>
 
-    <!-- Produtos em Destaque -->
-    <section class="featured-products">
-        <div class="container">
-            <h2>Produtos em Destaque</h2>
-            <div class="products-grid" id="products-grid">
-                <!-- Os produtos serão carregados via JavaScript -->
-            </div>
-        </div>
-    </section>
+<main class="container">
+<aside class="filters">
+<h3>Filtros</h3>
+<label>Categoria
+<select id="categoryFilter">
+<option value="all">Todas</option>
+<option value="whey">Whey</option>
+<option value="vitaminas">Vitaminas</option>
+<option value="creatina">Creatina</option>
+<option value="termogenico">Termogênico</option>
+</select>
+</label>
 
-    <!-- Ofertas do Dia -->
-    <section class="daily-deals">
-        <div class="container">
-            <div class="section-header">
-                <h2>Ofertas do Dia</h2>
-                <a href="#" class="see-all">Ver todas</a>
-            </div>
-            <div class="deals-grid" id="deals-grid">
-                <!-- As ofertas serão carregadas via JavaScript -->
-            </div>
-        </div>
-    </section>
 
-    <!-- Categorias -->
-    <section class="categories">
-        <div class="container">
-            <h2>Categorias</h2>
-            <div class="categories-grid">
-                <div class="category-card">
-                    <img src="https://via.placeholder.com/150" alt="Whey Protein">
-                    <h3>Whey Protein</h3>
-                </div>
-                <div class="category-card">
-                    <img src="https://via.placeholder.com/150" alt="Creatina">
-                    <h3>Creatina</h3>
-                </div>
-                <div class="category-card">
-                    <img src="https://via.placeholder.com/150" alt="Pré-treino">
-                    <h3>Pré-treino</h3>
-                </div>
-                <div class="category-card">
-                    <img src="https://via.placeholder.com/150" alt="Hipercalóricos">
-                    <h3>Hipercalóricos</h3>
-                </div>
-                <div class="category-card">
-                    <img src="https://via.placeholder.com/150" alt="Aminoácidos">
-                    <h3>Aminoácidos</h3>
-                </div>
-                <div class="category-card">
-                    <img src="https://via.placeholder.com/150" alt="Vitaminas">
-                    <h3>Vitaminas</h3>
-                </div>
-            </div>
-        </div>
-    </section>
+<label>Menor preço
+<input id="maxPrice" type="range" min="10" max="500" value="500">
+<div class="range-value">R$ <span id="maxPriceValue">500</span></div>
+</label>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h3>Suplementos Express</h3>
-                    <p>A melhor loja de suplementos do Brasil, com os melhores preços e entrega rápida.</p>
-                </div>
-                <div class="footer-section">
-                    <h3>Categorias</h3>
-                    <ul>
-                        <li><a href="#">Whey Protein</a></li>
-                        <li><a href="#">Creatina</a></li>
-                        <li><a href="#">Pré-treino</a></li>
-                        <li><a href="#">Hipercalóricos</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h3>Ajuda</h3>
-                    <ul>
-                        <li><a href="#">Central de Ajuda</a></li>
-                        <li><a href="#">Política de Entrega</a></li>
-                        <li><a href="#">Política de Devolução</a></li>
-                        <li><a href="#">Contato</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h3>Formas de Pagamento</h3>
-                    <div class="payment-methods">
-                        <span>Cartão de Crédito</span>
-                        <span>Boleto</span>
-                        <span>PIX</span>
-                    </div>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2023 Suplementos Express. Todos os direitos reservados.</p>
-            </div>
-        </div>
-    </footer>
 
-    <!-- Modal do Produto -->
-    <div id="product-modal" class="modal">
-        <div class="modal-content">
-            <span class="close">&times;</span>
-            <div class="modal-body" id="modal-body">
-                <!-- Conteúdo do modal será preenchido via JavaScript -->
-            </div>
-        </div>
-    </div>
+<button id="clearFilters">Limpar filtros</button>
+</aside>
 
-    <script src="script.js"></script>
+
+<section class="catalog">
+<div class="catalog-header">
+<h2>Produtos</h2>
+<div id="resultsInfo"></div>
+</div>
+
+
+<div id="productsGrid" class="products-grid">
+<!-- cards inseridos via JS -->
+</div>
+</section>
+</main>
+
+
+<!-- Modal do carrinho -->
+<div id="cartModal" class="modal hidden">
+<div class="modal-content">
+<button class="close-modal" id="closeCart">×</button>
+<h3>Seu Carrinho</h3>
+<div id="cartItems"></div>
+<div class="cart-footer">
+<div class="total">Total: R$ <span id="cartTotal">0.00</span></div>
+<button id="checkoutBtn" class="btn-primary">Finalizar compra</button>
+</div>
+</div>
+</div>
+
+
+<footer class="site-footer">
+<div class="container">
+<p>© <span id="year"></span> SupleMarket — Inspirado no estilo Mercado Livre</p>
+</div>
+</footer>
+
+
+<script src="scripts.js"></script>
 </body>
 </html>
