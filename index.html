@@ -1,78 +1,69 @@
-<!doctype html>
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suplementos Fitness - Sua Loja</title>
+    <link rel="stylesheet" href="style.css">
+</head>
 <body>
-<header class="site-header">
-<div class="container header-inner">
-<a class="brand" href="#">Suple<span>Market</span></a>
-<div class="search">
-<input id="searchInput" type="search" placeholder="Buscar produtos, ex: whey, creatina...">
-<button id="searchBtn">Buscar</button>
-</div>
-<div class="header-actions">
-<button id="cartBtn" class="cart-btn">Carrinho (<span id="cartCount">0</span>)</button>
-</div>
-</div>
-</header>
+    <header>
+        <div class="container">
+            <h1 class="logo">Suplementos<span class="logo-accent">Fit</span></h1>
+            <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Produtos</a></li>
+                    <li><a href="#">Sobre</a></li>
+                    <li><a href="#">Carrinho (0)</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h2>Alcance Seus Objetivos</h2>
+                <p>Os melhores suplementos para sua performance.</p>
+                <a href="#" class="btn-primary">Ver Produtos</a>
+            </div>
+        </section>
 
-<main class="container">
-<aside class="filters">
-<h3>Filtros</h3>
-<label>Categoria
-<select id="categoryFilter">
-<option value="all">Todas</option>
-<option value="whey">Whey</option>
-<option value="vitaminas">Vitaminas</option>
-<option value="creatina">Creatina</option>
-<option value="termogenico">Termogênico</option>
-</select>
-</label>
+        <section class="product-grid container">
+            <h2>Nossos Destaques</h2>
+            
+            <div class="products">
+                <div class="product-card">
+                    <img src="https://via.placeholder.com/300x300.png?text=Whey+Protein" alt="Whey Protein">
+                    <h3>Whey Protein Concentrado (1kg)</h3>
+                    <p class="price">R$ 99,90</p>
+                    <button class="btn-add-cart" data-product="Whey Protein">Adicionar ao Carrinho</button>
+                </div>
 
+                <div class="product-card">
+                    <img src="https://via.placeholder.com/300x300.png?text=Creatina" alt="Creatina">
+                    <h3>Creatina Monohidratada (300g)</h3>
+                    <p class="price">R$ 79,90</p>
+                    <button class="btn-add-cart" data-product="Creatina">Adicionar ao Carrinho</button>
+                </div>
 
-<label>Menor preço
-<input id="maxPrice" type="range" min="10" max="500" value="500">
-<div class="range-value">R$ <span id="maxPriceValue">500</span></div>
-</label>
+                <div class="product-card">
+                    <img src="https://via.placeholder.com/300x300.png?text=Pre-Treino" alt="Pre-Treino">
+                    <h3>Pré-Treino Nuclear (250g)</h3>
+                    <p class="price">R$ 119,90</p>
+                    <button class="btn-add-cart" data-product="Pré-Treino">Adicionar ao Carrinho</button>
+                </div>
+            </div>
+        </section>
+    </main>
 
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 SuplementosFit. Todos os direitos reservados.</p>
+        </div>
+    </footer>
 
-<button id="clearFilters">Limpar filtros</button>
-</aside>
-
-
-<section class="catalog">
-<div class="catalog-header">
-<h2>Produtos</h2>
-<div id="resultsInfo"></div>
-</div>
-
-
-<div id="productsGrid" class="products-grid">
-<!-- cards inseridos via JS -->
-</div>
-</section>
-</main>
-
-
-<!-- Modal do carrinho -->
-<div id="cartModal" class="modal hidden">
-<div class="modal-content">
-<button class="close-modal" id="closeCart">×</button>
-<h3>Seu Carrinho</h3>
-<div id="cartItems"></div>
-<div class="cart-footer">
-<div class="total">Total: R$ <span id="cartTotal">0.00</span></div>
-<button id="checkoutBtn" class="btn-primary">Finalizar compra</button>
-</div>
-</div>
-</div>
-
-
-<footer class="site-footer">
-<div class="container">
-<p>© <span id="year"></span> SupleMarket — Inspirado no estilo Mercado Livre</p>
-</div>
-</footer>
-
-
-<script src="scripts.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
