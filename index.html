@@ -8,51 +8,44 @@
 </head>
 <body>
 <header class="site-header">
-<div class="container">
-<h1 class="logo">NutriPlus</h1>
-<nav>
-<button id="cart-btn" aria-label="Abrir carrinho">Carrinho (<span id="cart-count">0</span>)</button>
-</nav>
-</div>
+    <div class="container">
+        <h1 class="logo">NutriPlus</h1>
+        <nav>
+            <button id="cart-btn" aria-label="Abrir carrinho">Carrinho (<span id="cart-count">0</span>)</button>
+        </nav>
+    </div>
 </header>
 
-
 <main class="container">
-<section class="hero">
-<h2>Suplementos de qualidade para seus treinos</h2>
-<p>Proteínas, vitaminas e pré-treinos selecionados para você.</p>
-</section>
+    <section class="hero">
+        <h2>Suplementos de qualidade para seus treinos</h2>
+        <p>Proteínas, vitaminas e pré-treinos selecionados para você.</p>
+    </section>
 
-
-<section class="products" id="products">
-<!-- Produtos serão renderizados por JavaScript -->
-</section>
+    <section class="products" id="products"></section>
 </main>
-
 
 <!-- Modal Carrinho -->
 <div id="cart-modal" class="modal hidden" role="dialog" aria-hidden="true">
-<div class="modal-content">
-<button id="close-cart" class="close-btn">×</button>
-<h3>Seu Carrinho</h3>
-<ul id="cart-items" class="cart-items"></ul>
-<div class="cart-summary">
-<strong>Total: R$ <span id="cart-total">0.00</span></strong>
+    <div class="modal-content">
+        <button id="close-cart" class="close-btn">×</button>
+        <h3>Seu Carrinho</h3>
+        <ul id="cart-items" class="cart-items"></ul>
+        <div class="cart-summary">
+            <strong>Total: R$ <span id="cart-total">0.00</span></strong>
+        </div>
+        <div class="cart-actions">
+            <button id="clear-cart">Limpar carrinho</button>
+            <button id="checkout">Finalizar compra</button>
+        </div>
+    </div>
 </div>
-<div class="cart-actions">
-<button id="clear-cart">Limpar carrinho</button>
-<button id="checkout">Finalizar compra</button>
-</div>
-</div>
-</div>
-
 
 <footer class="site-footer">
-<div class="container">
-<p>© <span id="year"></span> NutriPlus — Todos os direitos reservados.</p>
-</div>
+    <div class="container">
+        <p>© <span id="year"></span> NutriPlus — Todos os direitos reservados.</p>
+    </div>
 </footer>
-
 
 <script src="scripts.js"></script>
 </body>
