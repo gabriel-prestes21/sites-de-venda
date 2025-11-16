@@ -14,14 +14,14 @@ const yearEl = document.getElementById("year");
 const products = [
     { id: "1", name: "Whey Protein Isolado", price: 139.90, img: "img/whey-prot-iso-mor-po-900g_56302.png" },
     { id: "2", name: "Creatina Monohidratada", price: 89.90, img: "https://images.unsplash.com/photo-1579722821273-0f63e7d2a73c?w=600" },
-    { id: "3", name: "Pré-treino Explosive", price: 119.90, img: "https://images.unsplash.com/photo-1585238342028-3eaf6a35d1e5?w=600" },
-    { id: "4", name: "BCAA 2:1:1", price: 59.90, img: "https://images.unsplash.com/photo-1514996937319-344454492b37?w=600" },
+    { id: "3", name: "Pré-treino", price: 119.90, img: "https://images.unsplash.com/photo-1585238342028-3eaf6a35d1e5?w=600" },
+    { id: "4", name: "BCAA", price: 59.90, img: "https://images.unsplash.com/photo-1514996937319-344454492b37?w=600" },
     { id: "5", name: "Glutamina", price: 74.90, img: "https://images.unsplash.com/photo-1598515214217-6f10bb1dedad?w=600" },
     { id: "6", name: "Hipercalórico 3kg", price: 149.90, img: "https://images.unsplash.com/photo-1599566150163-29194dcaad36?w=600" },
     { id: "7", name: "Multivitamínico", price: 39.90, img: "https://images.unsplash.com/photo-1576330298599-4ff01f38f5d1?w=600" },
     { id: "8", name: "Ômega 3", price: 29.90, img: "https://images.unsplash.com/photo-1603398938378-d178b18a91e4?w=600" },
     { id: "9", name: "Cafeína 420mg", price: 34.90, img: "https://images.unsplash.com/photo-1518611012118-fc02cc4b322e?w=600" },
-    { id: "10", name: "Termogênico FireBurn", price: 129.90, img: "https://images.unsplash.com/photo-1598550874173-c6e3df13c8ba?w=600" }
+    { id: "10", name: "Termogênico", price: 129.90, img: "https://images.unsplash.com/photo-1598550874173-c6e3df13c8ba?w=600" }
 ];
 
 // CARRINHO
