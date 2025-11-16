@@ -1,37 +1,60 @@
-// Aguarda o documento HTML carregar completamente
-document.addEventListener('DOMContentLoaded', () => {
+// scripts.js
 
-    // Seleciona todos os botões "Adicionar ao Carrinho"
-    const botoesAdicionar = document.querySelectorAll('.btn-add-cart');
 
-    // Seleciona o link do carrinho na navegação (para atualizar a contagem)
-    // Vamos supor que o link do carrinho seja o último item da lista
-    const linkCarrinho = document.querySelector('nav ul li:last-child a');
+function changeQty(id, delta){
+const it = cart.find(i=>i.id===id)
+if(!it) return
+it.qty += delta
+if(it.qty <= 0) cart = cart.filter(i=>i.id!==id)
+saveCart(); updateCartCount(); renderCart()
+}
 
-    let totalItensCarrinho = 0;
 
-    // Itera sobre cada botão e adiciona um ouvinte de evento (click)
-    botoesAdicionar.forEach(botao => {
-        
-        botao.addEventListener('click', () => {
-            // Pega o nome do produto do atributo 'data-product'
-            const nomeProduto = botao.getAttribute('data-product');
+function clearCart(){ cart = []; saveCart(); updateCartCount(); renderCart() }
 
-            // 1. Ação Simples: Apenas um alerta
-            alert(`"${nomeProduto}" foi adicionado ao carrinho!`);
 
-            // 2. Ação Intermediária: Atualiza o contador do carrinho
-            totalItensCarrinho++;
-            linkCarrinho.textContent = `Carrinho (${totalItensCarrinho})`;
+function checkout(){
+if(cart.length===0){ alert('Seu carrinho está vazio.'); return }
+// Simulação de checkout
+alert('Compra finalizada! Obrigado.\nTotal: R$ ' + cartTotalEl.textContent)
+clearCart()
+}
 
-            /* Em um site real, aqui você faria uma lógica mais complexa:
-            - Criar um objeto 'item' (com id, nome, preço).
-            - Adicionar esse objeto a um array (o 'carrinho').
-            - Salvar esse array no 'localStorage' do navegador.
-            - Atualizar visualmente o ícone do carrinho.
-            */
-        });
 
-    });
+// Eventos
+productsEl.addEventListener('click', e=>{
+if(e.target.tagName === 'BUTTON'){
+const id = e.target.dataset.id
+addToCart(id)
+}
+})
 
-});
+
+cartBtn.addEventListener('click', ()=>{
+cartModal.classList.remove('hidden')
+cartModal.setAttribute('aria-hidden', 'false')
+renderCart()
+})
+
+
+closeCart.addEventListener('click', ()=>{
+cartModal.classList.add('hidden')
+cartModal.setAttribute('aria-hidden', 'true')
+})
+
+
+cartItemsEl.addEventListener('click', e=>{
+if(e.target.classList.contains('inc')){
+changeQty(e.target.dataset.id, 1)
+} else if(e.target.classList.contains('dec')){
+changeQty(e.target.dataset.id, -1)
+}
+})
+
+
+clearCartBtn.addEventListener('click', clearCart)
+checkoutBtn.addEventListener('click', checkout)
+
+
+// Inicialização
+renderProducts(); updateCartCount(); yearEl.textContent = new Date().getFullYear()
