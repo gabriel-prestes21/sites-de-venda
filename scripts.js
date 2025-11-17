@@ -12,7 +12,7 @@ const yearEl = document.getElementById("year");
 
 // PRODUTOS
 const products = [
-    { id: "1", name: "Whey Protein Isolado", price: 139.90, img: "img/whey-prot-iso-mor-po-900g_56302.png" },
+    { id: "1", name: "Whey Protein Isolado", price: 139.90, img: "https://cdn.shoppub.io/cdn-cgi/image/w=600,h=600,q=80,f=auto/gsn/media/uploads/produtos/foto/gdmyzsbz/chocolate.png" },
     { id: "2", name: "Creatina Monohidratada", price: 89.90, img: "https://images.unsplash.com/photo-1579722821273-0f63e7d2a73c?w=600" },
     { id: "3", name: "Pré-treino", price: 119.90, img: "https://images.unsplash.com/photo-1585238342028-3eaf6a35d1e5?w=600" },
     { id: "4", name: "BCAA", price: 59.90, img: "https://images.unsplash.com/photo-1514996937319-344454492b37?w=600" },
