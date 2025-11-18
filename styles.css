@@ -36,6 +36,7 @@ body {
     margin: 0;
     color: var(--accent);
     font-weight: 700;
+    cursor: pointer;
 }
 
 nav button {
@@ -184,4 +185,33 @@ nav button {
     .product img {
         height: 120px;
     }
+}
+
+/* ---------------- MODO ESCURO DO SECRETO ---------------- */
+.dark-mode {
+    --bg: #111;
+    --card: #1b1b1b;
+    --text: #f5f5f5;
+    --accent: #4fa3ff;
+}
+
+.dark-mode body {
+    background: var(--bg);
+    color: var(--text);
+}
+
+.dark-mode .site-header {
+    background: var(--card);
+}
+
+.dark-mode .site-footer {
+    color: #ccc;
+}
+
+.dark-mode .product {
+    background: var(--card);
+}
+
+.dark-mode .modal-content {
+    background: var(--card);
 }
