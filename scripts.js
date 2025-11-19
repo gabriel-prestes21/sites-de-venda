@@ -24,7 +24,7 @@ const products = [
 
 // --------------------- PRODUTOS SECRETOS ---------------------
 const secretProducts = [
-    { id: "s1", name: "Trembolona Acetato", price: 255, img: "https://www.google.com/url?sa=i&url=https%3A%2F%2Fprecosnoparaguai.com.br%2Fproduto%2Flanderlan-trembolona-acetato-100mg-plastico-negro-6812155304a53&psig=AOvVaw073ItDpiE-03vm4sYMVP4O&ust=1763636064700000&source=images&cd=vfe&opi=89978449&ved=0CBUQjRxqFwoTCKio47yG_pADFQAAAAAdAAAAABAW" },
+    { id: "s1", name: "Trembolona Acetato", price: 255, img: "https://landerlan.com.br/img/produto/trembolona-10ml-landerlan.jpg" },
     { id: "s2", name: "Oxandrolona", price: 235 , img: "https://d5gag3xtge2og.cloudfront.net/producao/35288766/G/oxana.jpeg" },
     { id: "s3", name: "Clembuterol", price: 160 , img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmR1Njf8cOr9mX2Vi2LQ71Pg_e71ozK8lhMA&s" },
     { id: "s4", name: "Durateston", price: 205 , img: "https://i0.wp.com/hmcmax.com/wp-content/uploads/2025/01/durateston_plus-_smart_suplementos-1.jpg.webp?fit=487%2C520&ssl=1" },
